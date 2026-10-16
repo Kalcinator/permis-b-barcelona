@@ -4,417 +4,126 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Driving Licence in Barcelona</title>
-<meta name="description" content="How to obtain a Spanish B driving licence in Barcelona with no previous licence: steps, costs, funding options and the questions that decide the next move.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<meta name="description" content="A short plan to get a Spanish B driving licence in Barcelona.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&family=Public+Sans:wght@400;600&display=swap">
 <style>
-/* Layout: one reading column, a summary panel first, then the procedure in order, costs, funding, questions, sources. */
+/* Layout: one short column — plan, cost, one free step, one message, sources folded away. */
 :root {
-  --bg: #f6f7f9;
-  --surface: #ffffff;
-  --ink: #17202b;
-  --muted: #56616f;
-  --line: #d9dee5;
-  --accent: #1d4f91;
-  --accent-soft: #e6eef8;
-  --check: #8a5a00;
-  --check-soft: #fbf1dc;
-  --ok: #1f6b45;
-  --ok-soft: #e3f2e9;
-  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --bg: #f6f7f9; --surface: #ffffff; --ink: #17202b; --muted: #56616f; --line: #d9dee5;
+  --accent: #1d4f91; --accent-soft: #e6eef8; --ok: #1f6b45;
+  --font-display: "Newsreader", Georgia, serif;
   --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #11161d; --surface: #18202a; --ink: #e7ebf0; --muted: #a2adba; --line: #2c3744;
-    --accent: #8db6ef; --accent-soft: #1d2b3d; --check: #e8b65a; --check-soft: #33291a;
-    --ok: #7fcfa0; --ok-soft: #1a2e24; color-scheme: dark;
-  }
+  :root:not([data-theme="light"]) { --bg: #11161d; --surface: #18202a; --ink: #e7ebf0; --muted: #a2adba; --line: #2c3744; --accent: #8db6ef; --accent-soft: #1d2b3d; --ok: #7fcfa0; color-scheme: dark; }
 }
-:root[data-theme="dark"] {
-  --bg: #11161d; --surface: #18202a; --ink: #e7ebf0; --muted: #a2adba; --line: #2c3744;
-  --accent: #8db6ef; --accent-soft: #1d2b3d; --check: #e8b65a; --check-soft: #33291a;
-  --ok: #7fcfa0; --ok-soft: #1a2e24; color-scheme: dark;
-}
+:root[data-theme="dark"] { --bg: #11161d; --surface: #18202a; --ink: #e7ebf0; --muted: #a2adba; --line: #2c3744; --accent: #8db6ef; --accent-soft: #1d2b3d; --ok: #7fcfa0; color-scheme: dark; }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
 body {
-  margin: 0; background: var(--bg); color: var(--ink);
-  font: 400 1rem/1.6 var(--font-body);
+  margin: 0; background: var(--bg); color: var(--ink); font: 400 1.05rem/1.55 var(--font-body);
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
-  padding-block: max(24px, env(safe-area-inset-top, 0px)) max(48px, env(safe-area-inset-bottom, 0px));
+  padding-block: max(28px, env(safe-area-inset-top, 0px)) max(40px, env(safe-area-inset-bottom, 0px));
 }
-main { max-width: 44rem; margin: 0 auto; display: grid; gap: 2.5rem; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; text-wrap: balance; margin: 0; }
-h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
-h2 { font-size: 1.55rem; }
-h3 { font-size: 1.15rem; font-family: var(--font-body); font-weight: 600; }
+main { max-width: 36rem; margin: 0 auto; display: grid; gap: 2rem; }
+h1, h2 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; margin: 0; text-wrap: balance; }
+h1 { font-size: 2.1rem; }
+h2 { font-size: 1.35rem; }
 p { margin: 0; }
-a { color: var(--accent); text-underline-offset: 2px; overflow-wrap: anywhere; }
-a:focus-visible, button:focus-visible, textarea:focus-visible, summary:focus-visible, input:focus-visible {
-  outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px;
-}
-.eyebrow { font: 500 0.75rem/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.lede { font-size: 1.08rem; color: var(--muted); }
-header { display: grid; gap: 0.75rem; }
-section { display: grid; gap: 1rem; }
-.stack { display: grid; gap: 0.75rem; }
-.summary {
-  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
-  padding: 1.25rem; display: grid; gap: 0.9rem;
-}
-.summary dl { margin: 0; display: grid; gap: 0.8rem; }
-.summary dt { font-weight: 600; }
-.summary dd { margin: 0.15rem 0 0; color: var(--muted); }
-.note {
-  border-left: 3px solid var(--check); background: var(--check-soft);
-  padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; font-size: 0.95rem;
-}
-.note.ok { border-left-color: var(--ok); background: var(--ok-soft); }
-.tag {
-  display: inline-block; font: 500 0.7rem/1.6 var(--font-mono); letter-spacing: 0.05em; text-transform: uppercase;
-  padding: 0 0.45rem; border-radius: 4px; vertical-align: 0.1em; margin-right: 0.35rem;
-}
-.tag.ok { background: var(--ok-soft); color: var(--ok); }
-.tag.check { background: var(--check-soft); color: var(--check); }
-ol.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; counter-reset: step; }
-ol.steps > li { counter-increment: step; }
-details {
-  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
-}
-details > summary {
-  cursor: pointer; list-style: none; padding: 0.85rem 1rem; display: flex; gap: 0.75rem; align-items: baseline;
-  font-weight: 600;
-}
-details > summary::-webkit-details-marker { display: none; }
-details > summary::before {
-  content: counter(step); font: 500 0.85rem/1.6 var(--font-mono); color: var(--accent);
-  background: var(--accent-soft); border-radius: 4px; padding: 0 0.45rem; flex: none;
-}
-details > summary::after { content: "+"; margin-left: auto; color: var(--muted); font-family: var(--font-mono); }
-details[open] > summary::after { content: "−"; }
-details .body { padding: 0 1rem 1rem; display: grid; gap: 0.6rem; }
-details .body ul { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.35rem; }
-ul.plain { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.4rem; }
-.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
-table { border-collapse: collapse; width: 100%; font-size: 0.93rem; font-variant-numeric: tabular-nums; }
-th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--line); vertical-align: top; }
-th { font-weight: 600; background: var(--accent-soft); }
-tr:last-child td { border-bottom: 0; }
-td.num { text-align: right; white-space: nowrap; }
-.route { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1rem; display: grid; gap: 0.5rem; }
-.phone { font: 500 1.05rem var(--font-mono); user-select: all; }
-form.questions { display: grid; gap: 1rem; }
-.q { display: grid; gap: 0.4rem; }
-.q label { font-weight: 500; display: flex; gap: 0.6rem; }
-.q label span.n { font: 500 0.9rem/1.6 var(--font-mono); color: var(--accent); flex: none; }
-.q .why { font-size: 0.88rem; color: var(--muted); padding-left: 1.6rem; }
-textarea {
-  width: 100%; min-height: 2.8rem; resize: vertical; font: inherit; color: var(--ink);
-  background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 0.5rem 0.65rem;
-}
-.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
-button {
-  font: 600 0.95rem var(--font-body); border: 0; border-radius: 6px; padding: 0.65rem 1.1rem; cursor: pointer;
-  background: var(--accent); color: var(--bg);
-}
-button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
-#copy-status, .msg-status { font-size: 0.9rem; color: var(--ok); }
-textarea.msg { font-size: 0.95rem; background: var(--bg); }
-#answers-output { font-family: var(--font-mono); font-size: 0.85rem; min-height: 8rem; }
-.sources { font-size: 0.88rem; color: var(--muted); }
-.sources ol { padding-left: 1.3rem; margin: 0; display: grid; gap: 0.4rem; }
-footer { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1rem; }
-@media (prefers-reduced-motion: no-preference) { details[open] .body { animation: open 0.18s ease-out; } }
-@keyframes open { from { opacity: 0.4; transform: translateY(-3px); } to { opacity: 1; transform: none; } }
+section { display: grid; gap: 0.75rem; }
+.sub { color: var(--muted); }
+a { color: var(--accent); overflow-wrap: anywhere; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+ol { margin: 0; padding-left: 1.4rem; display: grid; gap: 0.5rem; }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1rem; display: grid; gap: 0.5rem; }
+.total { font-size: 1.6rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.phone { font-size: 1.4rem; font-weight: 600; }
+textarea { width: 100%; font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 0.6rem; resize: vertical; }
+.row { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+button { font: 600 0.95rem var(--font-body); border: 0; border-radius: 6px; padding: 0.6rem 1.1rem; background: var(--accent); color: var(--bg); cursor: pointer; }
+#st { color: var(--ok); font-size: 0.9rem; }
+details { font-size: 0.85rem; color: var(--muted); }
+summary { cursor: pointer; }
+details ol { margin-top: 0.5rem; }
 </style>
 </head>
 <body>
 <main>
 
 <header>
-  <p class="eyebrow">Barcelona · Spanish licence, category B · checked 16 October 2026</p>
-  <h1>Getting a driving licence in Barcelona</h1>
-  <p class="lede">For a resident with no previous licence, holding the residence card of a family member of an EU citizen. Rules, prices and contacts link to their sources; points that still need confirming are marked <span class="tag check">to confirm</span>.</p>
+  <h1>Driving licence in Barcelona</h1>
+  <p class="sub">Four years of residence is more than the six months required: you can start now.</p>
 </header>
 
-<section aria-labelledby="glance">
-  <h2 id="glance">At a glance</h2>
-  <div class="summary">
-    <dl>
-      <div><dt>What has to be done</dt><dd>The full Spanish B licence: a medical report, a theory exam and a practical exam. With no licence from any country, there is nothing to exchange (a Russian licence could not have been exchanged anyway: Russia has no exchange agreement with Spain).<sup><a href="#s1">[1]</a></sup></dd></div>
-      <div><dt>Expected cost</dt><dd>About 620 € to 1,390 € with the DGT fee, medical report not included, mainly depending on the number of driving lessons (5 to 20 in the examples below).</dd></div>
-      <div><dt>Funding</dt><dd>No public or private scheme paying for a B licence in Barcelona was found for 2026. Two free registrations open the door to employment programmes and are worth doing anyway.</dd></div>
-      <div><dt>Languages</dt><dd>The theory exam can be taken in Spanish, Catalan, English, French or German. Russian is not on the DGT's list.</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section aria-labelledby="steps">
-  <h2 id="steps">The procedure, step by step</h2>
-  <ol class="steps">
-    <li><details open>
-      <summary>Medical and psychotechnical report</summary>
-      <div class="body">
-        <p>Issued by an approved medical centre for drivers (<em>centro de reconocimiento de conductores</em>). The report is valid for 90 days: the exam application has to be filed before it expires.<sup><a href="#s3">[3]</a></sup></p>
-        <p>The price is set by each centre. <span class="tag check">to confirm</span> Ask for a quote when booking.</p>
-      </div>
-    </details></li>
-
-    <li><details>
-      <summary>Choose a driving school (autoescuela)</summary>
-      <div class="body">
-        <p>As a general rule, Spanish regulations require training in an authorised driving school before the practical exam on open roads; a candidate without that training is not admitted to it.<sup><a href="#s5">[5]</a></sup></p>
-        <p>The theory can be studied alone and the exam application can be filed directly with the DGT (<em>Dirección General de Tráfico</em>, the Spanish traffic authority),<sup><a href="#s2">[2]</a></sup> but in practice a school is needed for the driving lessons.<sup><a href="#s5">[5]</a></sup></p>
-      </div>
-    </details></li>
-
-    <li><details>
-      <summary>Open the file with the DGT and pay the fee</summary>
-      <div class="body">
-        <p>The file contains:<sup><a href="#s2">[2]</a></sup></p>
-        <ul>
-          <li>the official application form (<em>Mod. 04</em>);</li>
-          <li>the medical report from step 1;</li>
-          <li>proof of payment of the DGT fee <strong>2.1</strong>: <strong>94.05 €</strong>, which covers <strong>two</strong> exam attempts. After two failures, a new application and a new fee are needed;</li>
-          <li>for a non-EU national: a valid residence authorisation.</li>
-        </ul>
-        <p>A foreign applicant must also show normal residence in Spain of at least six months.<sup><a href="#s5">[5]</a></sup> The DGT defines normal residence as at least 185 days per calendar year, in a regular situation.<sup><a href="#s4">[4]</a></sup></p>
-        <p class="note"><span class="tag check">to confirm</span>The residence card of a family member of an EU citizen is not named as such on the DGT list. Its acceptance has to be confirmed with the driving school or the Barcelona traffic office (<em>Jefatura de Tráfico</em>).</p>
-        <p>The DGT fee is paid separately from the driving school's prices.<sup><a href="#s8">[8]</a></sup><sup><a href="#s9">[9]</a></sup></p>
-      </div>
-    </details></li>
-
-    <li><details>
-      <summary>Theory exam</summary>
-      <div class="body">
-        <ul>
-          <li>30 questions, three possible answers each; pass with no more than 3 errors (10 % of the questions).<sup><a href="#s5">[5]</a></sup><sup><a href="#s7">[7]</a></sup></li>
-          <li>Languages: Spanish, the co-official languages (Catalan in Barcelona), English, French and German. An easy-read version exists. Russian is not on the list.<sup><a href="#s6">[6]</a></sup></li>
-          <li>The DGT has announced questions based on short videos to test risk perception; the exam time is extended accordingly.<sup><a href="#s7">[7]</a></sup></li>
-          <li>Free official practice tests, without registration, to get familiar with the format: <a href="https://sedeweb.dgt.gob.es/WEB_AUTO-9/examen/Instrucciones.xhtml">DGT practice tests</a>. There are only two or three questionnaires per licence type, so the DGT itself says they are not a study tool.<sup><a href="#s3">[3]</a></sup></li>
-        </ul>
-        <p>A passed theory exam stays valid for <strong>2 years</strong>. If the licence is not obtained within that period, all tests must be taken again.<sup><a href="#s3">[3]</a></sup></p>
-      </div>
-    </details></li>
-
-    <li><details>
-      <summary>Driving lessons and practical exam</summary>
-      <div class="body">
-        <p>Lessons and the exam take place in the school's dual-control car, with the instructor.<sup><a href="#s5">[5]</a></sup> The number of lessons depends on the learner and is the main cost variable.</p>
-        <p class="note">Waiting times for the practical exam are a known issue in Catalonia. In April 2026, Catalan driving schools reported more than 85,000 people waiting.<sup><a href="#s10">[10]</a></sup> In June 2026 the DGT disputed the schools' waiting-list figures in general, saying they count everyone who has passed the theory and still has two years to take the practical exam.<sup><a href="#s11">[11]</a></sup> Starting early helps.</p>
-      </div>
-    </details></li>
-  </ol>
-</section>
-
-<section aria-labelledby="costs">
-  <h2 id="costs">What it costs: two Barcelona schools</h2>
-  <p>Prices published by the schools themselves (Alba states that VAT is included; Corsa does not say). The DGT fee (94.05 €) and the medical report come on top.</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>School and offer</th><th>What is included</th><th class="num">Price</th></tr></thead>
-      <tbody>
-        <tr><td>Alba Autoescola, Eixample · Pack A<sup><a href="#s8">[8]</a></sup></td><td>Enrolment, paperwork, theory exams, material, 5 lessons, first practical exam</td><td class="num">522 €</td></tr>
-        <tr><td>Alba Autoescola · Pack B<sup><a href="#s8">[8]</a></sup></td><td>Same, with 10 lessons</td><td class="num">710 €</td></tr>
-        <tr><td>Autoescuela Corsa, Sarrià · theory course<sup><a href="#s9">[9]</a></sup></td><td>Theory course</td><td class="num">279 €</td></tr>
-        <tr><td>Autoescuela Corsa · per item<sup><a href="#s9">[9]</a></sup></td><td>Theory exam 34.95 € · lesson (45 min, manual) 44 € · practical exam 99 €</td><td class="num">variable</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p>Worked examples, medical report not included:</p>
-  <ul class="plain">
-    <li>Alba Pack A (5 lessons) plus the DGT fee: 522 + 94.05 = about <strong>616 €</strong>.</li>
-    <li>Alba Pack B (10 lessons) plus the DGT fee: 710 + 94.05 = about <strong>804 €</strong>.</li>
-    <li>Corsa with 20 lessons: theory course 279 € + theory exam 34.95 € + 20 lessons 880 € + practical exam 99 € = about 1,293 €; with the DGT fee, about <strong>1,387 €</strong>.</li>
-  </ul>
-  <p>Fewer lessons cost less; more lessons or a failed exam raise the bill.</p>
-  <p>Corsa also advertises courses and material in English.<sup><a href="#s9">[9]</a></sup></p>
-  <div class="note ok"><strong>Ways to spend less.</strong> Compare several schools, check what each pack includes, ask about payment in instalments, and book the lessons once the theory is passed.</div>
-</section>
-
-<section aria-labelledby="funding">
-  <h2 id="funding">Funding: what exists, what does not</h2>
-  <p>No scheme paying for a B licence in Barcelona in 2026 was found, after checking the Catalan employment service (SOC), the youth guarantee and the Generalitat's grants for unemployed people in training, none of which mention a B licence.<sup><a href="#s12">[12]</a></sup><sup><a href="#s14">[14]</a></sup> The private programme #EllasConducen (Midas with Ayuda en Acción) is described as helping women taking part in Ayuda en Acción programmes (five in Alicante in 2021, about ten by 2023); no open call for the public was found.<sup><a href="#s15">[15]</a></sup></p>
-
-  <h3>Two free registrations</h3>
-  <div class="route">
-    <p><span class="tag ok">confirmed</span><strong>Register as a jobseeker with the SOC</strong> (<em>Servei d'Ocupació de Catalunya</em>).<sup><a href="#s13">[13]</a></sup> The online procedure requires a Spanish DNI; people with a NIE linked to a residence authorisation can request registration by phone:</p>
-    <p class="phone"><a href="tel:+34930886200">930 886 200</a></p>
-    <p>Monday to Friday, 8:30 to 14:00. Ask during the call what follows; for online registrations, the SOC requires contacting the local employment office (<em>oficina de treball</em>) within 30 days.</p>
-  </div>
-  <div class="route">
-    <p><span class="tag ok">confirmed</span><strong>Register with the youth guarantee</strong> (<em>Garantía Juvenil</em>), for people over 16 and under 30 who were neither working nor in education or training the previous day, registered as residents (<em>empadronados</em>) in Catalonia, with a residence authorisation that allows work.<sup><a href="#s14">[14]</a></sup> Registering as a jobseeker also registers you with it, if you meet these conditions.<sup><a href="#s14">[14]</a></sup></p>
-    <p>Online (electronic ID, digital certificate, Cl@ve or a username and password): <a href="https://garantiajuvenil.sepe.es/login.action">garantiajuvenil.sepe.es</a>. Also possible in person at the employment office.</p>
-    <p>It gives access to training, internships and job offers; no licence funding is listed.</p>
-  </div>
-
-  <h3>Worth asking directly</h3>
-  <ul class="plain">
-    <li>The employment office, once registered: whether any 2026 programme includes the licence, for instance one linked to a specific job.</li>
-    <li>The district social services and Barcelona Activa, the city's employment agency (its website was under maintenance on 16 October 2026).</li>
-    <li>Charities working with migrant women in Barcelona (Red Cross, Càritas): no licence support was found online, which does not rule it out.</li>
-  </ul>
-</section>
-
-<section aria-labelledby="spanish">
-  <h2 id="spanish">Ready-to-send messages, in Spanish</h2>
-  <p>For the driving school, the SOC and the employment office. Copy, adjust if needed, and send or read out.</p>
-
-  <div class="route">
-    <h3>To a driving school (email or form)</h3>
-    <textarea id="msg-school" class="msg" rows="12" readonly>Hola:
-
-Quiero sacarme el permiso B y no tengo ningún permiso de conducir. Antes de matricularme, ¿podrían indicarme lo siguiente?
-
-1. El precio total: matrícula, curso teórico, precio de cada clase práctica y del examen práctico.
-2. Si es posible pagar a plazos.
-3. Tengo la tarjeta de residencia de familiar de ciudadano de la Unión (o el resguardo de la solicitud). ¿Es suficiente para abrir el expediente en la DGT?
-4. Qué centro de reconocimiento de conductores recomiendan y cuánto cuesta el informe.
-5. Cuánto tiempo hay que esperar ahora para el examen práctico.
-
-Muchas gracias.</textarea>
-    <div class="actions"><button type="button" class="secondary copy-msg" data-target="msg-school">Copy</button><span class="msg-status" role="status" aria-live="polite"></span></div>
-  </div>
-
-  <div class="route">
-    <h3>Phone call to the SOC, <span class="phone">930 886 200</span></h3>
-    <textarea id="msg-soc" class="msg" rows="4" readonly>Hola, quiero inscribirme como demandante de empleo. Tengo NIE y tarjeta de residencia de familiar de ciudadano de la Unión (o el resguardo de la solicitud). Si cumplo los requisitos, también quiero quedar inscrita en Garantía Juvenil.</textarea>
-    <div class="actions"><button type="button" class="secondary copy-msg" data-target="msg-soc">Copy</button><span class="msg-status" role="status" aria-live="polite"></span></div>
-  </div>
-
-  <div class="route">
-    <h3>At the employment office (oficina de treball)</h3>
-    <textarea id="msg-office" class="msg" rows="4" readonly>¿Hay algún programa este año que incluya o financie el permiso de conducir B, por ejemplo vinculado a una oferta de trabajo o a un curso de formación?</textarea>
-    <div class="actions"><button type="button" class="secondary copy-msg" data-target="msg-office">Copy</button><span class="msg-status" role="status" aria-live="polite"></span></div>
-  </div>
-</section>
-
-<section aria-labelledby="questions">
-  <h2 id="questions">Questions that decide the next step</h2>
-  <p>Please answer each question in the box under it, then press <strong>Copy my answers</strong> and paste them into a message. Answers are numbered automatically (1 — …, 2 — …). Nothing is sent or stored online.</p>
-  <form class="questions" id="qform">
-    <div class="q"><label for="q1"><span class="n">1</span>What is your exact age, and when do you turn 30?</label><p class="why">The youth guarantee stops at 30.</p><textarea id="q1" rows="1"></textarea></div>
-    <div class="q"><label for="q2"><span class="n">2</span>Since when have you been living in Spain?</label><p class="why">The DGT requires at least six months of normal residence in Spain.</p><textarea id="q2" rows="1"></textarea></div>
-    <div class="q"><label for="q3"><span class="n">3</span>Are you registered at the town hall (<em>empadronada</em>) in Barcelona? Since when?</label><p class="why">Required for the youth guarantee.</p><textarea id="q3" rows="1"></textarea></div>
-    <div class="q"><label for="q4"><span class="n">4</span>Do you already have the residence card itself, or only the receipt of the application?</label><p class="why">The DGT asks for a valid residence authorisation.</p><textarea id="q4" rows="1"></textarea></div>
-    <div class="q"><label for="q5"><span class="n">5</span>Are you registered with the SOC as a jobseeker?</label><p class="why">The entry point to every employment programme.</p><textarea id="q5" rows="1"></textarea></div>
-    <div class="q"><label for="q6"><span class="n">6</span>Do you receive any benefit, or are you followed by social services?</label><p class="why">Useful before contacting social services about support.</p><textarea id="q6" rows="1"></textarea></div>
-    <div class="q"><label for="q7"><span class="n">7</span>In which language would you take the theory exam: Spanish, Catalan or English?</label><p class="why">Russian is not available; this decides the study material and the school.</p><textarea id="q7" rows="1"></textarea></div>
-    <div class="q"><label for="q8"><span class="n">8</span>What budget can you set aside for the licence, and can you pay in instalments?</label><p class="why">About 620 € to 1,390 € with the DGT fee in the examples above, plus the medical report.</p><textarea id="q8" rows="1"></textarea></div>
-    <div class="q"><label for="q9"><span class="n">9</span>By when do you need the licence?</label><p class="why">Practical exam waiting times are long in Catalonia.</p><textarea id="q9" rows="1"></textarea></div>
-    <div class="q"><label for="q10"><span class="n">10</span>Is the licence needed for a specific job or job offer?</label><p class="why">Some employment programmes fund a licence only when it is tied to a job.</p><textarea id="q10" rows="1"></textarea></div>
-  </form>
-  <div class="actions">
-    <button type="button" id="copy-btn">Copy my answers</button>
-    <button type="button" class="secondary" id="clear-btn">Clear</button>
-    <span id="copy-status" role="status" aria-live="polite"></span>
-  </div>
-  <label for="answers-output" class="eyebrow">Your answers, ready to paste</label>
-  <textarea id="answers-output" readonly></textarea>
-</section>
-
-<section aria-labelledby="sources" class="sources">
-  <h2 id="sources">Sources</h2>
-  <p>All pages checked on 16 October 2026. Official sources first.</p>
+<section>
+  <h2>The plan</h2>
   <ol>
-    <li id="s1">DGT, countries with a licence exchange agreement (Russia not listed; updated 26/06/2026): <a href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/permisos-extranjeros-y-de-fuerzas-y-cuerpos-de-seguridad/canjes-de-permisos/paises-con-convenio-de-canjes/">dgt.es</a>; DGT e-office, licence exchanges by country: <a href="https://sede.dgt.gob.es/es/permisos-de-conducir/canjes-de-permisos/">sede.dgt.gob.es</a></li>
-    <li id="s2">DGT, exam application, documents and fee: <a href="https://sede.dgt.gob.es/es/permisos-de-conducir/obtencion-y-gestion-de-permisos/solicitud-de-prueba-de-aptitud-de-examen/">sede.dgt.gob.es</a></li>
-    <li id="s3">DGT, requirements, preparation and exams (updated 09/07/2026): <a href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/obtener-un-nuevo-permiso-de-conducir/requisitos-preparacion-y-presentacion-a-examen/">dgt.es</a></li>
-    <li id="s4">DGT, definition of normal residence: <a href="https://sede.dgt.gob.es/es/permisos-de-conducir/canjes-de-permisos/canjes-de-permisos-extranjeros/canjes-de-paises-sin-convenio/index.html">sede.dgt.gob.es</a></li>
-    <li id="s5">General Driver Regulation (Real Decreto 818/2009), art. 7, 41, 55 and annex VI: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2009-9481">boe.es</a></li>
-    <li id="s6">DGT application form Mod. 04, exam languages: <a href="https://sede.dgt.gob.es/export/sites/dgt/.galleries/modelos-solicitud/04/Mod.04-ES.pdf">sede.dgt.gob.es (PDF)</a></li>
-    <li id="s7">DGT news, video questions in the theory exam (15/10/2025): <a href="https://www.dgt.es/comunicacion/noticias/20251020-examen-teorico-la-importancia-de-conocer-el-riesgo">dgt.es</a></li>
-    <li id="s8">Alba Autoescola, B licence prices: <a href="https://www.albaautoescola.com/es/carnet-de-conducir-b/">albaautoescola.com</a></li>
-    <li id="s9">Autoescuela Corsa, B licence prices (updated 25/08/2026) and English courses: <a href="https://autoescuelacorsa.com/portfolio/carnet-de-coche-b-manual-o-automatico/">autoescuelacorsa.com</a>, <a href="https://autoescuelacorsa.com/en/">English page</a></li>
-    <li id="s10">3Cat, practical exam waiting list in Catalonia (15/04/2026): <a href="https://www.3cat.cat/3catinfo/mes-de-85000-persones-sesperen-per-fer-lexamen-practic-de-cotxe-es-frega-el-collapse/noticia/3404491/">3cat.cat</a></li>
-    <li id="s11">DGT press release on waiting lists (16/06/2026): <a href="https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/nota_prensa/2026/20260616-nota-de-prensa.pdf">dgt.es (PDF)</a></li>
-    <li id="s12">Generalitat de Catalunya, grants for unemployed people in training (updated 14/08/2026): <a href="https://tramits.gencat.cat/ca/tramits/tramits-temes/Beques_i_ajuts_formacio_persones_treballadores_desocupades">tramits.gencat.cat</a></li>
-    <li id="s13">SOC, registering as a jobseeker: <a href="https://serveiocupacio.gencat.cat/ca/tramits/tramits-persones/inscriu-te-com-a-demandant-docupacio/">serveiocupacio.gencat.cat</a></li>
-    <li id="s14">SOC, youth guarantee: <a href="https://serveiocupacio.gencat.cat/ca/soc/ocupacio-juvenil/">serveiocupacio.gencat.cat</a>; SEPE FAQ: <a href="https://www.sepe.es/HomeSepe/ca/preguntas-frecuentes/preguntas-frecuentes-garantia-juvenil.html">sepe.es</a></li>
-    <li id="s15">Ayuda en Acción, #EllasConducen (05/03/2021 and 28/02/2023): <a href="https://ayudaenaccion.org/actualidad/midas-carnet/">2021</a>, <a href="https://ayudaenaccion.org/actualidad/midas-actualiza-ellasconducen/">2023</a></li>
+    <li>Medical report at a <em>centro de reconocimiento de conductores</em> (valid 90 days).</li>
+    <li>Sign up with a driving school. It is required for the driving lessons.</li>
+    <li>Pay the DGT fee: 94.05 €, covers two exam attempts.</li>
+    <li>Theory exam, in Spanish: 30 questions, 3 mistakes allowed.</li>
+    <li>Driving lessons, then the practical exam.</li>
   </ol>
 </section>
 
-<footer>
-  <p>Rules and prices change. Before paying, check the figures with the school and the DGT.</p>
-</footer>
+<section>
+  <h2>Cost</h2>
+  <div class="box">
+    <p class="total">≈ 616 € + medical report</p>
+    <p>Cheapest of the offers checked: <a href="https://www.albaautoescola.com/es/carnet-de-conducir-b/">Alba Autoescola</a> (Eixample), Pack A at 522 €: enrolment, theory, 5 lessons, first practical exam. Plus the DGT fee. Extra lessons or retakes cost more.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Free, worth doing</h2>
+  <div class="box">
+    <p>Register as a jobseeker with the SOC, by phone:</p>
+    <p class="phone"><a href="tel:+34930886200">930 886 200</a></p>
+    <p>Mon–Fri, 8:30–14:00. Under 30, this also enrols you in <em>Garantía Juvenil</em> (youth job programmes). No aid paying for the licence was found, but ask.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Message to the school</h2>
+  <textarea id="msg" rows="9" readonly>Hola:
+
+Quiero sacarme el permiso B (no tengo ningún permiso). ¿Podrían confirmarme:
+1. el precio total del Pack A y el de cada clase extra;
+2. si mi tarjeta de residencia de familiar de ciudadano de la Unión es suficiente para el expediente de la DGT;
+3. qué centro de reconocimiento recomiendan y cuánto cuesta?
+
+Gracias.</textarea>
+  <div class="row"><button type="button" id="copy">Copy</button><span id="st" role="status" aria-live="polite"></span></div>
+</section>
+
+<details>
+  <summary>Sources (checked 16 October 2026)</summary>
+  <ol>
+    <li><a href="https://sede.dgt.gob.es/es/permisos-de-conducir/obtencion-y-gestion-de-permisos/solicitud-de-prueba-de-aptitud-de-examen/">DGT: application, documents, fee</a></li>
+    <li><a href="https://www.dgt.es/nuestros-servicios/permisos-de-conducir/obtener-un-nuevo-permiso-de-conducir/requisitos-preparacion-y-presentacion-a-examen/">DGT: medical report, exams</a></li>
+    <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2009-9481">Driver Regulation (RD 818/2009): residence, driving school, theory exam</a></li>
+    <li><a href="https://sede.dgt.gob.es/export/sites/dgt/.galleries/modelos-solicitud/04/Mod.04-ES.pdf">DGT form Mod. 04: exam languages</a></li>
+    <li><a href="https://www.albaautoescola.com/es/carnet-de-conducir-b/">Alba Autoescola: prices</a></li>
+    <li><a href="https://serveiocupacio.gencat.cat/ca/tramits/tramits-persones/inscriu-te-com-a-demandant-docupacio/">SOC: registration by phone</a></li>
+    <li><a href="https://www.sepe.es/HomeSepe/ca/preguntas-frecuentes/preguntas-frecuentes-garantia-juvenil.html">SEPE: Garantía Juvenil</a></li>
+  </ol>
+</details>
 
 </main>
 <script>
-(function () {
-  var ids = [];
-  for (var i = 1; i <= 10; i++) ids.push("q" + i);
-  var out = document.getElementById("answers-output");
-  var status = document.getElementById("copy-status");
-  var KEY = "permis-bcn-answers";
-
-  function load() {
-    try {
-      var saved = JSON.parse(localStorage.getItem(KEY) || "{}");
-      ids.forEach(function (id) { if (saved[id]) document.getElementById(id).value = saved[id]; });
-    } catch (e) {}
+document.getElementById("copy").addEventListener("click", function () {
+  var box = document.getElementById("msg"), st = document.getElementById("st");
+  function fallback() {
+    box.focus(); box.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) {}
+    st.textContent = ok ? "Copied." : "Select the text and copy it.";
   }
-  function save() {
-    try {
-      var data = {};
-      ids.forEach(function (id) { data[id] = document.getElementById(id).value; });
-      localStorage.setItem(KEY, JSON.stringify(data));
-    } catch (e) {}
-  }
-  function build() {
-    return ids.map(function (id, i) {
-      var v = document.getElementById(id).value.trim();
-      return (i + 1) + " — " + (v || "…");
-    }).join("\n");
-  }
-  function refresh() { out.value = build(); save(); }
-
-  ids.forEach(function (id) { document.getElementById(id).addEventListener("input", refresh); });
-
-  document.getElementById("copy-btn").addEventListener("click", function () {
-    var text = build();
-    out.value = text;
-    function fallback() {
-      out.focus(); out.select();
-      var ok = false;
-      try { ok = document.execCommand("copy"); } catch (e) {}
-      status.textContent = ok ? "Copied." : "Select the text below and copy it.";
-    }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () { status.textContent = "Copied."; }, fallback);
-    } else { fallback(); }
-  });
-
-  document.getElementById("clear-btn").addEventListener("click", function () {
-    ids.forEach(function (id) { document.getElementById(id).value = ""; });
-    status.textContent = "";
-    refresh();
-  });
-
-  Array.prototype.forEach.call(document.querySelectorAll(".copy-msg"), function (btn) {
-    btn.addEventListener("click", function () {
-      var box = document.getElementById(btn.getAttribute("data-target"));
-      var st = btn.parentNode.querySelector(".msg-status");
-      function fallback() {
-        box.focus(); box.select();
-        var ok = false;
-        try { ok = document.execCommand("copy"); } catch (e) {}
-        st.textContent = ok ? "Copied." : "Select the text and copy it.";
-      }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(box.value).then(function () { st.textContent = "Copied."; }, fallback);
-      } else { fallback(); }
-    });
-  });
-
-  load();
-  refresh();
-})();
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(box.value).then(function () { st.textContent = "Copied."; }, fallback);
+  } else { fallback(); }
+});
 </script>
 </body>
 </html>
